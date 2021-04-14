@@ -1,0 +1,5 @@
+# Usage
+
+Save the FM2_assembly.FCMacro file into your Macro directory (e.g.: ~/.freecad/Macros) and restart FreeCAD.
+
+Please adjust the path where the images are saved via "replace all" in the macro.

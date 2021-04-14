@@ -1,0 +1,124 @@
+# -*- coding: utf-8 -*-
+
+# Macro Begin: <your path for export>FreeCAD_Macro/FM2_assembly.FCMacro +++++++++++++++++++++++++++++++++++++++++++++++++
+import FreeCAD
+
+# change color of parts
+FreeCADGui.getDocument('Rendering').getObject('Part__Feature020').ShapeColor = (0.00,0.25,0.45)
+# hide all parts
+# Warning: all "." and "-" in names are replaced by "_" on the Python console (who knows why...)
+Gui.Selection.clearSelection()
+Gui.getDocument("Rendering").getObject("JackPlug_FC68125").Visibility=False
+Gui.getDocument("Rendering").getObject("JackPlug_FC68125001").Visibility=False
+Gui.getDocument("Rendering").getObject("JackPlug_FC68125002").Visibility=False
+Gui.getDocument("Rendering").getObject("JackPlug_FC68125003").Visibility=False
+Gui.getDocument("Rendering").getObject("JackPlug_FC68125004").Visibility=False
+Gui.getDocument("Rendering").getObject("JackPlug_FC68125005").Visibility=False
+Gui.getDocument("Rendering").getObject("JackPlug_FC68125006").Visibility=False
+Gui.getDocument("Rendering").getObject("JackPlug_FC68125007").Visibility=False
+Gui.getDocument("Rendering").getObject("R_0805_2012Metric").Visibility=False
+Gui.getDocument("Rendering").getObject("R_0805_2012Metric001").Visibility=False
+Gui.getDocument("Rendering").getObject("R_0805_2012Metric002").Visibility=False
+Gui.getDocument("Rendering").getObject("R_0805_2012Metric003").Visibility=False
+Gui.getDocument("Rendering").getObject("R_0805_2012Metric004").Visibility=False
+Gui.getDocument("Rendering").getObject("R_0805_2012Metric005").Visibility=False
+Gui.getDocument("Rendering").getObject("R_0805_2012Metric006").Visibility=False
+Gui.getDocument("Rendering").getObject("R_0805_2012Metric007").Visibility=False
+Gui.getDocument("Rendering").getObject("ProMicro").Visibility=False
+Gui.getDocument("Rendering").getObject("C_0805_2012Metric").Visibility=False
+Gui.getDocument("Rendering").getObject('Buzzer_12x9_5RM7_6').Visibility=False
+Gui.getDocument("Rendering").getObject("D_DO_201AE_P12_70mm_Horizontal").Visibility=False
+Gui.getDocument("Rendering").getObject("D_DO_201AE_P12_70mm_Horizontal001").Visibility=False
+Gui.getDocument("Rendering").getObject("D_DO_201AE_P12_70mm_Horizontal002").Visibility=False
+Gui.getDocument("Rendering").getObject("D_DO_201AE_P12_70mm_Horizontal003").Visibility=False
+Gui.getDocument("Rendering").getObject("D_DO_201AE_P12_70mm_Horizontal004").Visibility=False
+Gui.getDocument("Rendering").getObject("D_DO_201AE_P12_70mm_Horizontal005").Visibility=False
+Gui.getDocument("Rendering").getObject("D_DO_201AE_P12_70mm_Horizontal006").Visibility=False
+Gui.getDocument("Rendering").getObject("D_DO_201AE_P12_70mm_Horizontal007").Visibility=False
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P7_62mm_Horizontal").Visibility=False
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P7_62mm_Horizontal001").Visibility=False
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P7_62mm_Horizontal002").Visibility=False
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P7_62mm_Horizontal003").Visibility=False
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P7_62mm_Horizontal004").Visibility=False
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P7_62mm_Horizontal005").Visibility=False
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P7_62mm_Horizontal006").Visibility=False
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P7_62mm_Horizontal007").Visibility=False
+Gui.getDocument("Rendering").getObject("SOT_23_5").Visibility=False
+Gui.getDocument("Rendering").getObject("SOT_23_5001").Visibility=False
+Gui.getDocument("Rendering").getObject("OLED092_display").Visibility=False
+Gui.getDocument("Rendering").getObject("mp").Visibility=False
+Gui.getDocument("Rendering").getObject("PinHeader_2x05_P2_54mm_Vertical").Visibility=False
+Gui.getDocument("Rendering").getObject("PinHeader_1x03_P2_54mm_Vertical").Visibility=False
+Gui.getDocument("Rendering").getObject("C_Disc_D5_0mm_W2_5mm_P5_00mm").Visibility=False
+
+# set view correctly
+Gui.activeDocument().activeView().viewTop()
+Gui.SendMsgToActiveView("ViewFit")
+
+# create images
+
+#00 - empty PCB
+Gui.activeDocument().activeView().saveImage('/home/beni/00.jpeg',1000,1300,'Current')
+
+#01 - 2x5 pin header
+Gui.getDocument("Rendering").getObject("PinHeader_2x05_P2_54mm_Vertical").Visibility=True
+Gui.activeDocument().activeView().saveImage('/home/beni/01.jpeg',1000,1300,'Current')
+
+#02 - 100n C
+Gui.getDocument("Rendering").getObject("C_Disc_D5_0mm_W2_5mm_P5_00mm").Visibility=True
+Gui.activeDocument().activeView().saveImage('/home/beni/02.jpeg',1000,1300,'Current')
+
+#03 - jack plugs
+Gui.getDocument("Rendering").getObject("JackPlug_FC68125").Visibility=True
+Gui.getDocument("Rendering").getObject("JackPlug_FC68125001").Visibility=True
+Gui.getDocument("Rendering").getObject("JackPlug_FC68125002").Visibility=True
+Gui.getDocument("Rendering").getObject("JackPlug_FC68125003").Visibility=True
+Gui.getDocument("Rendering").getObject("JackPlug_FC68125004").Visibility=True
+Gui.getDocument("Rendering").getObject("JackPlug_FC68125005").Visibility=True
+Gui.getDocument("Rendering").getObject("JackPlug_FC68125006").Visibility=True
+Gui.getDocument("Rendering").getObject("JackPlug_FC68125007").Visibility=True
+Gui.activeDocument().activeView().saveImage('/home/beni/03.jpeg',1000,1300,'Current')
+
+#04 - TVS diodes
+Gui.getDocument("Rendering").getObject("D_DO_201AE_P12_70mm_Horizontal").Visibility=True
+Gui.getDocument("Rendering").getObject("D_DO_201AE_P12_70mm_Horizontal001").Visibility=True
+Gui.getDocument("Rendering").getObject("D_DO_201AE_P12_70mm_Horizontal002").Visibility=True
+Gui.getDocument("Rendering").getObject("D_DO_201AE_P12_70mm_Horizontal003").Visibility=True
+Gui.getDocument("Rendering").getObject("D_DO_201AE_P12_70mm_Horizontal004").Visibility=True
+Gui.getDocument("Rendering").getObject("D_DO_201AE_P12_70mm_Horizontal005").Visibility=True
+Gui.getDocument("Rendering").getObject("D_DO_201AE_P12_70mm_Horizontal006").Visibility=True
+Gui.getDocument("Rendering").getObject("D_DO_201AE_P12_70mm_Horizontal007").Visibility=True
+Gui.activeDocument().activeView().saveImage('/home/beni/04.jpeg',1000,1300,'Current')
+
+#05 - buzzer R (120-220R?)
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P7_62mm_Horizontal005").Visibility=True
+Gui.activeDocument().activeView().saveImage('/home/beni/05.jpeg',1000,1300,'Current')
+
+#06 - 18k R
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P7_62mm_Horizontal001").Visibility=True
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P7_62mm_Horizontal006").Visibility=True
+Gui.activeDocument().activeView().saveImage('/home/beni/06.jpeg',1000,1300,'Current')
+
+#07 - 10k R
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P7_62mm_Horizontal").Visibility=True
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P7_62mm_Horizontal002").Visibility=True
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P7_62mm_Horizontal003").Visibility=True
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P7_62mm_Horizontal004").Visibility=True
+Gui.getDocument("Rendering").getObject("R_Axial_DIN0204_L3_6mm_D1_6mm_P7_62mm_Horizontal007").Visibility=True
+Gui.activeDocument().activeView().saveImage('/home/beni/07.jpeg',1000,1300,'Current')
+
+#08 - MPX
+Gui.getDocument("Rendering").getObject("mp").Visibility=True
+Gui.activeDocument().activeView().saveImage('/home/beni/08.jpeg',1000,1300,'Current')
+
+#09 - buzzer
+Gui.getDocument("Rendering").getObject('Buzzer_12x9_5RM7_6').Visibility=True
+Gui.activeDocument().activeView().saveImage('/home/beni/09.jpeg',1000,1300,'Current')
+
+#10 - pro micro
+Gui.getDocument("Rendering").getObject("ProMicro").Visibility=True
+Gui.activeDocument().activeView().saveImage('/home/beni/10.jpeg',1000,1300,'Current')
+
+
+
+# Macro End: <your path for export>FreeCAD_Macro/FM2_assembly.FCMacro +++++++++++++++++++++++++++++++++++++++++++++++++
